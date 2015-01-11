@@ -38,6 +38,7 @@ Ext.define('demo.view.productsGridPanel', {
 			{
 				header : 'Product Price',
 				dataIndex : 'price',
+				renderer : 'usMoney',
 				flex : 1
 			},
 			{

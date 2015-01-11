@@ -23,6 +23,7 @@ Ext.define('demo.view.reviewPanel', {
 			}, 
 			{
 				header : 'Product Price',
+				renderer : 'usMoney',
 				dataIndex : 'price',
 				flex : 1
 			},
@@ -34,6 +35,7 @@ Ext.define('demo.view.reviewPanel', {
 			{
 	             header: 'Total', 	            
 	             flex: 1,
+	             renderer : 'usMoney',
 	             dataIndex : 'total'
 			}
 		

@@ -19,6 +19,9 @@ Ext.define('demo.controller.mainController', {
 			},
 			'mainPanel button#confirmBtn' : {
 				click : this.confirmPurchase
+			},
+			'mainPanel button#printBtn' : {
+				click : this.printConfirmation
 			}
 			
 		});
@@ -26,6 +29,10 @@ Ext.define('demo.controller.mainController', {
 	
 	goBack : function(){
 		 this.getMainPanel().getLayout().setActiveItem(0);
+	},
+	
+	printConfirmation: function() {
+		window.print();
 	},
 	
 	reviewItems : function(){

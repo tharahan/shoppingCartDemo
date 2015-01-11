@@ -151,16 +151,29 @@ Ext.define('demo.view.mainPanel', {
 				        	xtype: 'label',
 				        	cls : 'cost-cls',
 				        	itemId: 'finalcostlbl',				        
-				        	margin: '5 40'
+				        	margin: '0 30'
 				        	
 				        },
 				        {
 				        	xtype: 'label',
 				        	cls : 'ref-cls',
 				        	itemId: 'refCodelbl',				        
-				        	margin: '5 40'
+				        	margin: '0 30'
 				        	
-				        }
+				        },
+				        { 
+			            	xtype: 'button', 
+			            	html: '<i class="fa fa-print fa-2x" > Print</i>',
+			            	itemId: 'printBtn',
+			            	margin: '50 30',
+			            	border: 1,
+			            	style: {
+			            	    borderColor: 'black',
+			            	    borderStyle: 'solid'
+			            	},
+			            	scope: this
+			            }
+				        
 				        
 				]        
 			}
