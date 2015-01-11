@@ -1,0 +1,15 @@
+{
+    success: true,
+    products: [
+        {code: "PRG0001", name: "Advanced Java Programming", price: "39.95"},
+        {code: "PRG0002", name: "Java EE 7 First Look", price: "44.99"},
+        {code: "BGD0001", name: "MongoDB Cookbook", price: "37.95"},
+        {code: "BGD0003", name: "Mastering Hadoop", price: "55.99"},
+        {code: "WEB0001", name: "AngularJS Web Application Development", price: "32.25"},
+        {code: "WEB0002", name: "MEAN Web Development", price: "42.99"},
+        {code: "CLD0001", name: "Learning OpenShift", price: "34.50"},
+        {code: "SQL0001", name: "SQL Server 2012", price: "29.95"},
+        {code: "PRG0003", name: "Mastering ActiveMQ", price: "42.95"}
+      
+    ]
+}

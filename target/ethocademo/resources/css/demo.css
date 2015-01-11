@@ -1,0 +1,14 @@
+.cost-cls {
+    font-size: 16px !important;
+    color : blue;
+    font-weight: bold;   
+}
+.ref-cls {
+    font-size: 24px !important;
+    color : green;
+    font-weight: normal;   
+}
+.title-cls {
+    font-size: 24px !important;
+    font-weight: bold
+}

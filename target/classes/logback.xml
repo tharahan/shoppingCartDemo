@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<property resource="demo.properties" />
+
+
+	<appender name="fileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_DIR}/demoLog.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">			
+			<fileNamePattern>${LOG_DIR}/demoLog.%d{yyyy-MM-dd}.log</fileNamePattern><!-- daily rollover -->			
+			<maxHistory>30</maxHistory><!-- keep 30 days' worth of history -->
+		</rollingPolicy>
+
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} [%X{userId}] %logger{36}[%L] - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} [%X{userId}] %logger{36}[%L] - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+
+	<root level="DEBUG">
+		<appender-ref ref="fileAppender" />
+		<appender-ref ref="console" />
+	</root>
+</configuration>
