@@ -15,7 +15,6 @@ import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -28,9 +27,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-import com.jprism.ethocademo.dao.ShoppingDAOImpl;
-import com.jprism.ethocademo.model.Product;
 import com.jprism.ethocademo.model.Purchase;
+import com.jprism.ethocademo.TestUtil;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -44,7 +42,7 @@ public class ActionControllerTest {
 	@Autowired MockHttpSession session;
 	@Autowired MockHttpServletRequest request;
 
-	private ShoppingDAOImpl shoppingDAOMock = Mockito.mock(ShoppingDAOImpl.class);
+	
 	public static final MediaType APPLICATION_JSON = new MediaType(MediaType.APPLICATION_JSON.getType(),
 																		MediaType.APPLICATION_JSON.getSubtype() );
 	public static final MediaType APPLICATION_JSON_UTTF8 = new MediaType(MediaType.APPLICATION_JSON.getType(),
@@ -57,19 +55,9 @@ public class ActionControllerTest {
 		 MockitoAnnotations.initMocks(this);		
 		 this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();		 
 	}
-
-	//@Test
-	public void test() throws Exception {
-		
-		Product p1 = new Product("PRG0001","Advanced Java Programming",39.95);
-		Product p2 = new Product("WEB0001","AngularJS Web Application Development",32.95);
-		Product p3 = new Product("SQL0001","SQL Server 2012",44.95);
-		
-		Mockito.when(shoppingDAOMock.findAllProducts("guest")).thenReturn(Arrays.asList(p1, p2, p3));	
-		
-	}
 	
-	//@Test
+	
+	@Test
 	public void checkGetProducts() throws Exception {			
 		
 		this.mockMvc.perform(get("/shopping/list.action")
