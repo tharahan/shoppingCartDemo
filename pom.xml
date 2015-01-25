@@ -160,13 +160,7 @@
 			<version>1.10.19</version>
 			<scope>test</scope>
 		</dependency>
-
-		<dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-test</artifactId>
-		    <version>${spring.version}</version>
-		    <scope>test</scope>
-		</dependency>
+		
 		<dependency>
 		    <groupId>com.jayway.jsonpath</groupId>
 		    <artifactId>json-path</artifactId>
@@ -184,7 +178,6 @@
 	
 	<build>
 		<finalName>ethocademo</finalName>
-		
 		<plugins>
 			<plugin>
 			  <groupId>org.eclipse.jetty</groupId>
@@ -192,5 +185,6 @@
 			  <version>9.2.6.v20141205</version>
 			</plugin>
 		</plugins>
+	
 	</build>
 </project>
