@@ -178,13 +178,19 @@
 		    <artifactId>json-path-assert</artifactId>
 		    <version>${jsonpath.version}</version>
 		    <scope>test</scope>
-		</dependency>
-		
-		
+		</dependency>		
 	</dependencies>
 	
 	
 	<build>
 		<finalName>ethocademo</finalName>
+		
+		<plugins>
+			<plugin>
+			  <groupId>org.eclipse.jetty</groupId>
+			  <artifactId>jetty-maven-plugin</artifactId>
+			  <version>9.2.6.v20141205</version>
+			</plugin>
+		</plugins>
 	</build>
 </project>
